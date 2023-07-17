@@ -7,7 +7,7 @@ pipeline{
     stages {
         stages ('PULL THE APPLICATION FROM GITHUB') {
             steps{
-                git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
+                git branch: 'ci-jenkins', url:'https://github.com/goksmann/personal.git'
             }
         }
         stage ('FETCH THE CODE FROMGITHUB'){
