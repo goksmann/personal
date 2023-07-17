@@ -1,21 +1,23 @@
 pipeline{
     agent any
-    tools{
+    tools {
         jdk 'JDK'
-        maven 'Maven'
+        maven 'Maven' 
     }
     stages {
-        stage ('PULL THE APPLICATION FROM GITHUB') {
+        stages ('PULL THE APPLICATION FROM GITHUB') {
             steps{
                 git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
             }
         }
-        stage ('BUILD THE APPLICATION') {
-            steps {
-                sh 'mvn install -DeskipTest'
+        stage ('FETCH THE CODE FROMGITHUB'){
+            steps{
+                sh 'mvn install -Deskiptests'
             }
         }
             }
         }
     }
+
+     }
 }
