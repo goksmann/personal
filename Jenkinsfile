@@ -6,7 +6,9 @@ pipeline{
     }
     stages{
         stage('Git Checkout'){
-            git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
+            steps{
+                git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
+            }
         }
     }
 }
