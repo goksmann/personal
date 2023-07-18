@@ -5,7 +5,7 @@ pipeline{
         maven 'Maven'
     }
     stages{
-        stage('Git Checkout'){
+        stage('GIT CHECKOUT'){
             steps{
                 git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
             }
