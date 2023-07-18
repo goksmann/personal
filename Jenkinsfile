@@ -12,7 +12,7 @@ pipeline{
         }
         stage ('FETCH THE CODE FROMGITHUB'){
             steps{
-                sh 'mvn install -Deskiptests'
+                sh 'mvn install -Deskiptests
             }
         }
             }
