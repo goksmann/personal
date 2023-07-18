@@ -10,9 +10,9 @@ pipeline{
                 git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
             }
         }
-        stage('MAVIN BUILD'){
+        stage('Build'){
             steps{
-                sh 'mvn test'
+                sh 'mvn clean install'
             }
         }
     }
