@@ -25,5 +25,10 @@ pipeline{
                 sh 'mvn verify -DiskipUnitTests'
             }
         }
+        stage('FECT CODE'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
