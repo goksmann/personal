@@ -5,11 +5,18 @@ pipeline{
         maven 'Maven'
     }
     stages{
-        stage('GIT CHECKOUT'){
+        stage('GITCHECKOUT'){
             steps{
-                git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'  
-
+                git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
             }
         }
-    }    
-}
+        stage('TEST'){
+            steps{
+                sh 'mvn test'
+            }
+        }
+        stage('BUILD THE APPLICATION'){
+            sh 'mvn test'
+        }
+        }
+    }
