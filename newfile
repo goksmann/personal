@@ -14,7 +14,11 @@ pipeline{
             steps{
                 sh 'mv test'
             }
-        }     
-    
+        }  
+        stage('BUILD'){
+            steps{
+                sh 'mv clean install'
+            }
+        }
     }  
 }
