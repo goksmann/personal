@@ -10,13 +10,13 @@ pipeline{
                 git branch: 'ci-jenkins', url: 'https://github.com/goksmann/personal.git'
             }
         }
-        stage ('BUILD THE APPLICATION FROM GITHUB'){
-            steps {
+        stage('BUILD THE APPLICATION FROM GITHUB') {
+            steps{
                 sh 'mvn install-DeskipTests'
             }
         }
-        stage ('TEST THE APPLICATION'){
-            steps {
+        stage('TEST THE APPLICATION') {
+            steps{
                 sh 'mvn test'
             }
         }
