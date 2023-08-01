@@ -22,7 +22,7 @@ pipeline{
         }
         stage ('UNIT TEST') {
             steps {
-                sh 'test'
+                sh ' mvn test'
             }
         }
     }
