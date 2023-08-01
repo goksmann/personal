@@ -12,7 +12,7 @@ pipeline{
         }
         stage ('BUILD THE APPLICATION FROM GITHUB') {
             steps{
-                sh 'mvn install -DeskipTests'
+                sh 'mvn install -DeskipunitTests'
             }
         }
         stage ('TEST THE APPLICATION') {
