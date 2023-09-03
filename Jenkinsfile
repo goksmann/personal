@@ -25,5 +25,11 @@ pipeline{
                 sh 'mvn test'
             }
         }
-    }
-}
+        stage('Sonar Scanner'){
+            steps{
+                withSonarQubeEnv(credentialsId: 'batch-3',installationName: 'SonarQube') {
+                    sh 'mvn sonar:sonar'
+                 }
+        }
+     }
+
