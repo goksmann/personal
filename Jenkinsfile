@@ -29,6 +29,6 @@ pipeline{
             steps{
                 withSonarQubeEnv(credentialsId: 'batch-3',installationName: 'SonarQube') {
                     sh 'mvn sonar:sonar'
-                 }
+                }
+           }
         }
-     }
